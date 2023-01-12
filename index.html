@@ -18,7 +18,7 @@
         <header>
             <img id="logo" src="images\logo\Booki.png" alt="Logo Booki">
             <nav>
-                <ul> <!--deux ancres, lien sur les titres-->
+                <ul class="nav__barre"> <!--contient deux ancres, lien sur les titres-->
                     <li class="nav__link"><a href="#lienHebergements">Hébergement</a></li>
                     <li class="nav__link"><a href="#lienActivites">Activités</a></li>
                 </ul>
@@ -27,12 +27,12 @@
 
         <div class="recherche">
             <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
-            <p>En plein centre-ville ou en pleine nature</p>
+            <p class="recherche__texte">En plein centre-ville ou en pleine nature</p>
             
             <form class="recherche__barre" action="" method="get"><!--Insert le formulaire-->        
-                <label for="lieu"><i class="fa-solid fa-location-dot"></i></label><!--défini le picto de début pour l'input à id "lieu"-->
-                <input type="search" name="lieu" id="lieu"><!--insert le champs de recherche ayant pour id "lieu"-->               
-                <input type="button" value="Rechercher"><!--insert le bouton un recherche inactif-->
+                <label for="lieu" class="recherche__barre--picto"><i class="fa-solid fa-location-dot"></i></label><!--défini le picto de début pour l'input à id "lieu"-->
+                <input type="search" name="lieu" id="lieu" class="recherche__barre--champs"><!--insert le champs de recherche ayant pour id "lieu"-->               
+                <input type="button" value="Rechercher" class="recherche__barre--bouton"><!--insert le bouton un recherche inactif-->
             </form>
 
             <div class="recherche__filtres">
@@ -56,7 +56,7 @@
             </div>
 
             <div class="nombreDeLogements">
-                <i id="picto_i" class="fa-solid fa-info"></i>
+                <div id="picto_i"><i class="fa-solid fa-info"></i></div>
                 <p> Plus de 500 logements sont disponibles dans cette ville</p>
             </div>
         </div>

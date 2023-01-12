@@ -1,7 +1,158 @@
+@media screen and (max-width : 1400px) {
+/*pour les ecrans de taille max 1400px*/
+
+/*pour toute la page*/
+
 body {
-    font-family: 'Raleway', Arial, sans-serif;
+    font-family: 'Raleway', Arial, serif, sans-serif;
+    font-size: 16px; /* taille de police de base pour tout le document*/
+    margin-top: 0px;
+    margin-left: 30px;
+    margin-right: 20px;
 }
 
-strong {
-    font-weight: 700;
+/*header*/
+
+#logo {
+    width: 61.09px; /* défnin la largeur donnée */
+    height: 19px; /*défini la hauteur donnée */
+    position: absolute; /* détache la position du reste de la page et la bloque */
+    padding-top: 2%;
+}
+
+.nav__barre {
+    display: block; /*passe de inline à block*/
+    display: flex; /*rend la barre flex pour positionner les liens*/
+    flex-direction: row; /*positionne les liens en ligne */
+    justify-content: flex-end; /* alignement à droite */
+    margin-top: 0px; /* fixe la marge top à 0 pour le survol tout en haut de la page*/
+}
+
+.nav__link {
+    
+    list-style-type: none; /*enlèce les puces de la liste*/
+    margin-right: 2%; /*fixe la marge par la droite entre les deux liens et le bord droit*/
+    padding-top: 2%; /*determine la hauteu du padding pour la barre au survol */
+    padding-left: 2%; /*détermine les bords du pading gauche et donc la largeur de la barre au survol */
+    padding-right: 2%; /*idem à droite */
+}
+.nav__link a { /*selectionne tous les liens (a) dans les class nav__link */
+    color: #0065FC; /*texte en bleu */
+    text-decoration: none; /*annule le soulignement au lien cliqué */
+}
+.nav__link:hover {
+    border-top: 2px #0065FC solid; /*fait apparaitre une bordure en haut au survol du lien */
+}
+
+/*barre de recherche */
+
+.recherche {
+    display: flex; /*positionne les blocs*/
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 22px; /*taille de titre*/
+    margin-bottom: 0px; /*réduit la marge ave le paragraphe dessous */
+    font-weight: 700; /*ecrit en gras*/
+}
+
+.recherche__texte {
+    margin-top: 0px; /*enleve la marge */
+}
+
+.recherche__barre {
+    display: flex; /*pour gérer les blocs et distance de la barre */
+    height: 49px;
+}
+
+.recherche__barre--picto {
+    background-color: #F2F2F2; /*couleur de fond du picto */
+    border: 1px solid #F2F2F2; /*burdure du picto */
+    border-radius: 15px 0px 0px 15px; /*arrondi côté gauche */
+    width: 50px;
+}
+
+i.fa-solid.fa-location-dot { /*selectionne avec .pour identifier les 2 classes du i*/
+    display: flex; /*flex le picto en boite */
+    height: 49px; /*donne a la boite la meme hauteur que le formulaire */
+    align-items: center; /*centre verticalement */
+    justify-content: center; /*centre horizontalement */
+    font-size: 150%; /*redimensionne le picto */
+}
+
+.recherche__barre--champs {
+    border: 1px solid #F2F2F2;
+    font-weight: 700; /*Ecrit en gras dans le champs */
+    font-size: 18px; /*Ecrit en 18 dans le champs */
+}
+
+.recherche__barre--bouton {
+    background-color: #0065FC; /* fond bleu*/
+    border: 1px solid #0065FC; /*bordure de la même couleur que le fond */
+    border-radius: 0px 15px 15px 0px; /*arrondi des bordures*/
+    color: #FFFFFF; /*couleur du texte en blanc */
+    font-size: 18px; /* agrandie la taille du texte à 18 */
+}
+/*Filtres*/
+
+.recherche__filtres {
+    display: flex; /* elements flex et placés en ligne */
+    justify-content: space-between; /*centre les filtres sur la largeur donnée */
+    width: 75%; /*limite l'étalement de sur les 3/4 de la page */
+    padding-top: 2px;
+    margin-top: 1em;
+    align-items: center; /*centre verticalement */
+}
+
+.critere {
+    font-size: 17px; /*taille demandée */
+    display: flex; /*passe chaque element en flex */
+    flex-direction: row; /* position horizontale */
+    border: 2px solid #D9D9D9; /*ajoute la bordure à tous*/
+    border-radius: 25px; /* arrondi les bordures */
+    white-space: nowrap; /* annule le retour à la ligne du texte qui reste en une seule ligne */
+    height: 35px; /*bloque la hauteur */
+    align-items: center; /*centre les filtres*/
+    padding-left:10px;
+    padding-right: 10px;
+}
+
+.recherche__filtres i {
+    display: flex; /*flex le picto en boite */
+    align-items: center; /*centre verticalement */
+    justify-content: center; /*centre horizontalement */
+    font-size: 100%; /*redimensionne le picto */
+    color: #0065FC;
+}
+
+.critere p {
+    font-weight: 700; /*ercit en gras*/
+    margin: 0px;
+    padding: 2px;
+}
+
+.recherche__filtres :hover {
+    background: #DEEBFF;
+}
+
+/*infos nbre logements */
+
+.nombreDeLogements {
+    display: flex;
+    align-items: center;
+}
+
+#picto_i { /*boite du picto*/
+    margin: 10px;
+    width: 24px; /*faire un carré*/
+    height: 24px;
+    border: 1px solid #D9D9D9; /*mettre la bordure*/
+    border-radius: 100%;  /*l'arrondir */
+}
+
+.fa-solid.fa-info {
+    color: #0065FC;
+    padding-left: 10px;
+    padding-top: 3px;
 }
