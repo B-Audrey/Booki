@@ -7,7 +7,7 @@ body {
     font-family: 'Raleway', Arial, serif, sans-serif;
     font-size: 16px; /* taille de police de base pour tout le document*/
     margin-top: 0px;
-    margin-left: 30px;
+    margin-left: 50px;
     margin-right: 20px;
 }
 
@@ -29,7 +29,6 @@ body {
 }
 
 .nav__link {
-    
     list-style-type: none; /*enlèce les puces de la liste*/
     margin-right: 2%; /*fixe la marge par la droite entre les deux liens et le bord droit*/
     padding-top: 2%; /*determine la hauteu du padding pour la barre au survol */
@@ -38,7 +37,7 @@ body {
 }
 .nav__link a { /*selectionne tous les liens (a) dans les class nav__link */
     color: #0065FC; /*texte en bleu */
-    text-decoration: none; /*annule le soulignement au lien cliqué */
+    text-decoration: none; /*annule le soulignement du lien */
 }
 .nav__link:hover {
     border-top: 2px #0065FC solid; /*fait apparaitre une bordure en haut au survol du lien */
@@ -143,7 +142,7 @@ i.fa-solid.fa-location-dot { /*selectionne avec .pour identifier les 2 classes d
     align-items: center;
 }
 
-#picto_i { /*boite du picto*/
+#picto_i { /*boite du picto i pour faire le rond*/
     margin: 10px;
     width: 24px; /*faire un carré*/
     height: 24px;
@@ -152,7 +151,99 @@ i.fa-solid.fa-location-dot { /*selectionne avec .pour identifier les 2 classes d
 }
 
 .fa-solid.fa-info {
-    color: #0065FC;
-    padding-left: 10px;
+    color: #0065FC; /*passe en bleu*/
+    padding-left: 10px; /*ajoute les marges intérieures pour le rond*/
     padding-top: 3px;
+}
+
+/*bloc hebergement*/
+#contenuPrincipal{
+    display: flex;
+    flex-direction: row;
+}
+
+.hebergements {
+    display: flex; /*flex le bloc */
+    flex-direction: column; /*place en colonne */
+    background-color: #F2F2F2; /*ajoute le fond sur le bloc */
+    border-radius: 20px; /*arrondi les bords du bloc*/
+    height: 625px; /*bloque la hauteur des blocs */
+    max-width: 880px;
+    padding-left: 56px;
+    padding-right: 40px;
+    margin-right: 40px;
+}
+
+.cardH {
+    display: flex;
+    flex-direction: column;
+    background: #FFFFFF;
+    border-radius: 20px; /*arrondi la card */
+    box-sizing: border-box;
+    width: 246px;
+    height: 199px;
+}
+
+.cardH a {
+    text-decoration: none; /*annule le soulignement des balises enfants créé par le lien*/
+}
+
+.cardH img {
+    box-sizing: border-box;
+    width: 246px;
+    height: 124px;
+    object-fit: contain;
+}
+
+.cardH__texte{
+    box-sizing: border-box;
+    width: 246px;
+    height: 75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+}
+
+
+h4 {
+    font-weight: 700;
+    color: #000000;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-decoration: none;
+    
+}
+.cardH__texte p {
+    font-size: 14px;
+    color: #000000;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    
+}
+
+
+.hebergements__card {
+    width: 880px;
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+    grid-template-rows: 200px 200px;
+    gap: 40px;
+}
+
+
+
+
+
+
+.populaires {
+    display: flex; /*flex le bloc */
+    flex-direction: column; /*place en colonne */
+    background: #F2F2F2; /*ajoute le fond sur le bloc */
+    border-radius: 20px; /*arrondi les bords du bloc*/
+    height: 625px; /*bloque la hauteur des blocs */
+    max-width: 420px;
+    padding-left: 37px;
+    padding-right: 40px
+
 }
