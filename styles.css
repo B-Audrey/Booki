@@ -7,8 +7,9 @@ body {
     font-family: 'Raleway', Arial, serif, sans-serif;
     font-size: 16px; /* taille de police de base pour tout le document*/
     margin-top: 0px;
-    margin-left: 50px;
-    margin-right: 20px;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 0px;
 }
 
 /*header*/
@@ -31,16 +32,19 @@ body {
 .nav__link {
     list-style-type: none; /*enlèce les puces de la liste*/
     margin-right: 2%; /*fixe la marge par la droite entre les deux liens et le bord droit*/
-    padding-top: 2%; /*determine la hauteu du padding pour la barre au survol */
+    padding-top: 20px; /*bloque la hauteu du padding pour la barre au survol */
     padding-left: 2%; /*détermine les bords du pading gauche et donc la largeur de la barre au survol */
     padding-right: 2%; /*idem à droite */
 }
 .nav__link a { /*selectionne tous les liens (a) dans les class nav__link */
-    color: #0065FC; /*texte en bleu */
+    color: #000000; /*texte en noir */
     text-decoration: none; /*annule le soulignement du lien */
+    padding-top: 18px; /*la hauteur du padding - les 2px de bordure apparentes*/
 }
-.nav__link:hover {
+
+.nav__link a:hover {
     border-top: 2px #0065FC solid; /*fait apparaitre une bordure en haut au survol du lien */
+    color:#0065FC;
 }
 
 /*barre de recherche */
@@ -98,7 +102,7 @@ i.fa-solid.fa-location-dot { /*selectionne avec .pour identifier les 2 classes d
 .recherche__filtres {
     display: flex; /* elements flex et placés en ligne */
     justify-content: space-between; /*centre les filtres sur la largeur donnée */
-    width: 75%; /*limite l'étalement de sur les 3/4 de la page */
+    width: 65%; /*limite l'étalement sur la page */
     padding-top: 2px;
     margin-top: 1em;
     align-items: center; /*centre verticalement */
@@ -156,94 +160,264 @@ i.fa-solid.fa-location-dot { /*selectionne avec .pour identifier les 2 classes d
     padding-top: 3px;
 }
 
-/*bloc hebergement*/
+/*bloc principal*/
 #contenuPrincipal{
     display: flex;
-    flex-direction: row;
+    flex-direction: row; /*aligne les 2 blocs hebergement et populaire */
+    width: 100%;
+}
+ .euro{
+    font-weight: 600;
 }
 
+/*hebergements*/
+
 .hebergements {
-    display: flex; /*flex le bloc */
-    flex-direction: column; /*place en colonne */
+    display: grid; /*flex le bloc */
+    grid-template-rows: 1fr 4fr 2fr; /*place en colonne */
     background-color: #F2F2F2; /*ajoute le fond sur le bloc */
     border-radius: 20px; /*arrondi les bords du bloc*/
-    height: 625px; /*bloque la hauteur des blocs */
+    height: 625px; /*bloque la hauteur du bloc */
+    width: 70%;
     max-width: 880px;
-    padding-left: 56px;
-    padding-right: 40px;
-    margin-right: 40px;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-right: 3%;
+    padding-top: 1em; /*aligne la hauteur avec le bloc de droite*/
+}
+
+.hebergements h2 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.hebergements__card {
+    display: grid; /*positionne en grille*/
+    grid-template-columns:1fr 1fr 1fr; /*défini le nombre de colonnes*/
+    grid-template-rows: 1fr 1fr; /*défini le nombre de lignes*/
+    gap: 2%; /*défini l'espace entre les cards*/
 }
 
 .cardH {
-    display: flex;
+    display: flex; /*potiionne les cards en flex*/
     flex-direction: column;
-    background: #FFFFFF;
+    background: #FFFFFF; /*insère le fond blanc*/
     border-radius: 20px; /*arrondi la card */
-    box-sizing: border-box;
+    box-sizing: border-box; /*défini la taille*/
     width: 246px;
     height: 199px;
+    margin-bottom: 5%;
 }
 
 .cardH a {
     text-decoration: none; /*annule le soulignement des balises enfants créé par le lien*/
+    color: #000000; /*en noir pas en couleur liens*/
 }
 
 .cardH img {
-    box-sizing: border-box;
-    width: 246px;
-    height: 124px;
-    object-fit: contain;
+    box-sizing: content-box; /*défini la taille de la boite image*/
+    width: 100%;
+    max-width: 236px; /*compte la card - les bords*/
+    height: 50%;
+    max-height: 114px; /*défini une hauteur max pour pas que l'image ne sorte */
+    border: 5px solid #FFFFFF; /*ajoute le tour blanc */
+    border-radius: 20px 20px 0px 0px; /*arrondi les bords du haut de l'image pour coller aux bords de la card*/
+    object-fit: cover; /*redimensionne et positionne l'image*/
 }
 
 .cardH__texte{
-    box-sizing: border-box;
-    width: 246px;
+    box-sizing: border-box; /*défini la taille des boites */
     height: 75px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 10px;
+    display: flex; /*place le texte flex*/
+    flex-direction: column; /*passe en affichage colonnes*/
+    margin-left: 15px;
 }
 
-
-h4 {
-    font-weight: 700;
-    color: #000000;
+.cardH h4 {
+    font-weight: 700; /*en gras*/
     margin-top: 0px;
-    margin-bottom: 0px;
-    text-decoration: none;
-    
+    margin-bottom: 2%; 
 }
 .cardH__texte p {
     font-size: 14px;
-    color: #000000;
     margin-top: 0px;
-    margin-bottom: 0px;
-    
+    margin-bottom: 3%; 
 }
 
-
-.hebergements__card {
-    width: 880px;
-    display: grid;
-    grid-template-columns:1fr 1fr 1fr;
-    grid-template-rows: 200px 200px;
-    gap: 40px;
+.cardH__etoiles {
+    color: #0065FC;
+    font-size: 12px;
 }
 
+.cardH__etoiles .card__etoiles--gris {
+    color: #F2F2F2;
+}
 
+/*le petit texte du bas*/
+.hebergements > p { /*selectionne l'enfant p direct uniquement*/
+    font-size:  18px;
+    font-weight: 700;
+    margin-top: 5%;
+}
 
-
-
+/*populaires*/
 
 .populaires {
-    display: flex; /*flex le bloc */
-    flex-direction: column; /*place en colonne */
+    display: grid; /*flex le bloc */
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 6fr; /*une ligne entête, une pour l'espace des cards */
     background: #F2F2F2; /*ajoute le fond sur le bloc */
     border-radius: 20px; /*arrondi les bords du bloc*/
-    height: 625px; /*bloque la hauteur des blocs */
+    width: 30%;
     max-width: 420px;
-    padding-left: 37px;
-    padding-right: 40px
+    padding-left: 2%;
+    padding-right: 2%;
+}
 
+.populaires__entete {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: 1fr;
+    padding-top: 1em; /*aligne avec le bloc de gauche*/
+    }
+
+.populaires h2 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.fa-solid.fa-chart-line {
+    color: #0065FC;
+    font-size: 18px;
+    margin-top: 2em;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.populaires__card {
+    display: grid; /*positionne en grille*/
+    grid-template-columns:1fr; /*défini le nombre de colonnes*/
+    gap: 1%; /*défini l'espace entre les cards*/
+}
+
+.cardP a { /* le grid ne s'applique qu'aux enfants directs */
+    display: grid;
+    grid-template-columns: 40% 60%;
+    background: #FFFFFF; /*insère le fond blanc*/
+    border-radius: 20px; /*arrondi la card */
+    box-sizing: border-box; /*défini la taille*/
+    width: 100%;
+    max-width: 343px;
+    height: 144px;
+    text-decoration: none; /*annule le soulignement des balises enfants créé par le lien*/
+    color: #000000; /*en noir pas en couleur liens*/
+}
+
+.cardP img {                                                                                                                                                                                                  
+    box-sizing: content-box; /*défini la taille de la boite image*/
+    width: 100%;
+    max-width: 137px;
+    height: 100%;
+    max-height: 134px;
+    border: 5px solid #FFFFFF; /*ajoute le tour blanc */
+    border-radius: 20px 0px 0px 20px; /*arrondi les bords du haut de l'image pour coller aux bords de la card*/
+    object-fit: cover; /*redimensionne et positionne l'image*/
+}
+
+.cardP__texte {
+    box-sizing: border-box; /*défini la taille des boites */
+    height: 144px;
+    display: grid; /*place le texte flex*/
+    grid-template-columns: 1fr; /*passe en affichage colonnes*/
+    grid-template-rows: 1fr 1fr 3fr;
+    margin-left: 10%;
+    padding-right: 5%; /*pour pas que le texte n'aille trop à droite et reste lisible au centre de la card*/
+    margin-top: 5%;
+}
+.cardP__texte h4{
+    font-weight: 700;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.cardP__texte p {
+    font-size: 14px;
+    margin-top: 0px;
+    margin-bottom: 5px; 
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+/*positionne et colore les etoiles*/
+.cardP__etoiles {
+    color: #0065FC;
+    font-size: 12px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.cardP__etoiles .card__etoiles--gris {
+    color: #F2F2F2;
+}
+
+/*activités*/
+
+.activites{
+    display: flex;
+    flex-direction: column;
+}
+ .activites__cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 3%;
+    width: 100%;
+ }
+
+ .cardA {
+    display: grid; /*potiionne les cards grid*/
+    grid-template-rows: 85% 15%; /*fait deux colonnes*/
+    background: #FFFFFF; /*insère le fond blanc pour la partie du texte*/
+    border-radius: 20px; /*arrondi toute la card */
+    box-sizing: border-box; /*défini la taille*/
+    max-width: 302px;
+    max-height: 445px;
+    box-shadow: 1px 1px 9.6px rgba(0, 0, 0, 0.1);
+}
+
+.cardA img {                                                                                                                                                                                                  
+    box-sizing: border-box; /*défini la taille de la boite image incluant les bordures*/
+    width: 100%;
+    max-width: 302px;
+    height: 100%;
+    max-height: 389px;
+    border-radius: 20px 20px 0px 0px; /*arrondi les bords du haut de l'image pour coller aux bords de la card*/
+    object-fit: cover; /*redimensionne et positionne l'image*/
+}
+
+.cardA h4{
+    font-weight: 700;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-left: 5%;
+}
+
+/*footer*/
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: #F2F2F2;
+    width: 100%;
+    max-width: 1339px;
+    height: 30%;
+    max-height: 225px;
+    margin-top: 5%;
+    padding: 3%;
+    padding-left: 5%;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: 700;
 }
