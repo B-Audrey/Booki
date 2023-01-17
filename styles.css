@@ -197,7 +197,7 @@ i.fa-solid.fa-location-dot { /*selectionne avec .pour identifier les 2 classes d
     display: grid; /*positionne en grille*/
     grid-template-columns:1fr 1fr 1fr; /*défini le nombre de colonnes*/
     grid-template-rows: 1fr 1fr; /*défini le nombre de lignes*/
-    gap: 2%; /*défini l'espace entre les cards*/
+    gap: 3%; /*défini l'espace entre les cards*/
     width: 100%;
 }
 
@@ -209,8 +209,6 @@ i.fa-solid.fa-location-dot { /*selectionne avec .pour identifier les 2 classes d
     box-sizing: border-box; /*défini la taille*/
     width: 100%;
     height: 100%;
-    max-width: 246px;
-    max-height: 199px;
     margin-bottom: 5%;
     box-shadow: 1px 1px 9.6px rgba(0, 0, 0, 0.1);
 }
@@ -223,8 +221,7 @@ i.fa-solid.fa-location-dot { /*selectionne avec .pour identifier les 2 classes d
 
 .cardH img {
     box-sizing: content-box; /*défini la taille de la boite image*/
-    width: 95%;
-    max-width: 236px; /*compte la card - les bords*/
+    width: 96%;
     align-content: center; /*pour que l'image soit centrée*/
     height: 60%;
     max-height: 114px; /*défini une hauteur max pour pas que l'image ne sorte */
@@ -384,9 +381,10 @@ i.fa-solid.fa-location-dot { /*selectionne avec .pour identifier les 2 classes d
 .cardA h4{
     font-weight: 700;
     font-size: 15px;
-    margin-top: auto;
-    margin-bottom: auto;
-    padding-left: 5%;
+    margin:0px;
+    padding-top: 2%;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 /*footer*/
@@ -416,6 +414,9 @@ h3 {
 /*forme  tablette*/
 @media screen and (max-width : 992px) {
 
+body {
+    width: 90%;
+}
 /*modifs nav*/
 .nav__link a:hover {
     color: #000000; /*reste noir*/
@@ -434,9 +435,30 @@ h3 {
 
 /*hebergements*/
 .hebergements, .populaires {
-    width: 96%;
+    width: 96%
 }
 
+.hebergements h2 {
+    display: flex;
+    align-items: center;
+    height: 85px;      
+}
+.populaires__entete {
+    height: 85px;
+    
+}
 .populaires__card {
     flex-direction: row;
+    width: 100%;
+}
+.cardP {
+    max-width: 252px;
+}
+
+.cardA {
+    max-height: 267px;
+}
+
+.piedDePage div {
+    margin-right: 10%;
 }
