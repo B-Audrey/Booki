@@ -1,432 +1,426 @@
-@media screen and (max-width : 1400px) {
-/*pour les ecrans de taille max 1400px*/
-
 /*pour toute la page*/
 
-    body {
-        font-family: 'Raleway', Arial, serif, sans-serif;
-        font-size: 16px; /* taille de police de base pour tout le document*/
-        margin-top: 0px;
-        margin-left: 2%;
-        margin-right: 2%;
-        margin-bottom: 0px;
-        width: 100%; /*ajuste la taille du body à la taille de la fenetre*/
-    }
+body {
+    font-family: 'Raleway', Arial, serif, sans-serif;
+    font-size: 16px; /* taille de police de base pour tout le document*/
+    margin :auto;
+    width: 1400px; /*ajuste la taille du body à la taille de la fenetre*/
+}
 
 /*header*/
 
-    #logo {
-        width: 61.09px; /* défini la largeur donnée */
-        height: 19px; /*défini la hauteur donnée */
-        position: absolute; /* détache la position du reste de la page et la bloque */
-        padding-top: 2%;
-    }
+header {
+    width: 100%;
+}
 
-    .nav__barre {
-        display: block; /*passe de inline à block*/
-        display: flex; /*rend la barre flex pour positionner les liens*/
-        flex-direction: row; /*positionne les liens en ligne */
-        justify-content: flex-end; /* alignement à droite */
-        margin-top: 0px; /* fixe la marge top à 0 pour le survol tout en haut de la page*/
-    }
+#logo {
+    width: 61.09px; /* défini la largeur donnée */
+    height: 19px; /*défini la hauteur donnée */
+    position: absolute; /* détache la position du reste de la page et la bloque */
+    padding-top: 1%
+}
 
-    .nav__link {
-        list-style-type: none; /*enlèce les puces de la liste*/
-        margin-right: 2%; /*fixe la marge par la droite entre les deux liens et le bord droit*/
-        padding-top: 20px; /*bloque la hauteu du padding pour la barre au survol */
-        padding-left: 2%; /*détermine les bords du pading gauche et donc la largeur de la barre au survol */
-        padding-right: 2%; /*idem à droite */
-    }
-    .nav__link a { /*selectionne tous les liens (a) dans les class nav__link */
-        color: #000000; /*texte en noir */
-        text-decoration: none; /*annule le soulignement du lien */
-        padding-top: 18px; /*la hauteur du padding - les 2px de bordure apparentes*/
-    }
+.nav__barre {
+    display: block; /*passe de inline à block*/
+    display: flex; /*rend la barre flex pour positionner les liens*/
+    flex-direction: row; /*positionne les liens en ligne */
+    justify-content: flex-end; /* alignement à droite */
+    margin-top: 0px; /* fixe la marge top à 0 pour le survol tout en haut de la page*/
+}
 
-    .nav__link a:hover {
-        border-top: 2px #0065FC solid; /*fait apparaitre une bordure en haut au survol du lien */
-        color:#0065FC;
-    }
+.nav__link {
+    list-style-type: none; /*enlèce les puces de la liste*/
+    margin-right: 2%; /*fixe la marge par la droite entre les deux liens et le bord droit*/
+    padding: 20px; /*bloque la hauteur du padding pour la barre au survol */
+}
 
-    /*barre de recherche */
+.nav__link a { /*selectionne tous les liens (a) dans les class nav__link */
+    color: #000000; /*texte en noir */
+    text-decoration: none; /*annule le soulignement du lien */
+    padding-top: 18px; /*la hauteur du padding - les 2px de bordure apparentes*/
+}
 
-    .recherche {
-        display: flex; /*positionne les blocs*/
-        flex-direction: column;
-    }
+.nav__link a:hover {
+    border-top: 2px #0065FC solid; /*fait apparaitre une bordure en haut au survol du lien */
+    color:#0065FC;
+}
 
-    h1 {
-        font-size: 22px; /*taille de titre*/
-        margin-bottom: 0px; /*réduit la marge ave le paragraphe dessous */
-        font-weight: 700; /*ecrit en gras*/
-    }
+/*barre de recherche */
 
-    .recherche__texte {
-        margin-top: 0px; /*enleve la marge */
-    }
+.recherche {
+    display: flex; /*positionne les blocs*/
+    flex-direction: column;
+    width: 100%;
+}
 
-    .recherche__barre {
-        display: flex; /*pour gérer les blocs et distance de la barre */
-        height: 49px;
-    }
+h1 {
+    font-size: 22px; /*taille de titre*/
+    margin-bottom: 0px; /*réduit la marge ave le paragraphe dessous */
+    font-weight: 700; /*ecrit en gras*/
+}
 
-    .recherche__barre--picto {
-        background-color: #F2F2F2; /*couleur de fond du picto */
-        border: 1px solid #F2F2F2; /*burdure du picto */
-        border-radius: 15px 0px 0px 15px; /*arrondi côté gauche */
-        width: 50px;
-    }
+.recherche__texte {
+    margin-top: 0px; /*enleve la marge */
+}
 
-    i.fa-solid.fa-location-dot { /*selectionne avec .pour identifier les 2 classes du i*/
-        display: flex; /*flex le picto en boite */
-        height: 49px; /*donne a la boite la meme hauteur que le formulaire */
-        align-items: center; /*centre verticalement */
-        justify-content: center; /*centre horizontalement */
-        font-size: 150%; /*redimensionne le picto */
-    }
+.recherche__barre {
+    display: flex; /*pour gérer les blocs et distance de la barre */
+    height: 49px;
+}
 
-    .recherche__barre--champs {
-        border: 1px solid #F2F2F2;
-        font-weight: 700; /*Ecrit en gras dans le champs */
-        font-size: 18px; /*Ecrit en 18 dans le champs */
-    }
+.recherche__barre--picto {
+    background-color: #F2F2F2; /*couleur de fond du picto */
+    border: 1px solid #F2F2F2; /*bordure du picto */
+    border-radius: 15px 0px 0px 15px; /*arrondi côté gauche */
+    width: 50px;
+}
 
-    .recherche__barre--bouton {
-        background-color: #0065FC; /* fond bleu*/
-        border: 1px solid #0065FC; /*bordure de la même couleur que le fond */
-        border-radius: 0px 15px 15px 0px; /*arrondi des bordures*/
-        color: #FFFFFF; /*couleur du texte en blanc */
-        font-size: 18px; /* agrandie la taille du texte à 18 */
-    }
+i.fa-solid.fa-location-dot { /*selectionne avec .pour identifier les 2 classes du i*/
+    display: flex; /*flex le picto en boite */
+    height: 49px; /*donne a la boite la meme hauteur que le formulaire */
+    align-items: center; /*centre verticalement */
+    justify-content: center; /*centre horizontalement */
+    font-size: 150%; /*redimensionne le picto */
+}
+
+.recherche__barre--champs {
+    border: 1px solid #F2F2F2;
+    font-weight: 700; /*Ecrit en gras dans le champs */
+    font-size: 18px; /*Ecrit en 18 dans le champs */
+}
+
+.recherche__barre--bouton {
+    background-color: #0065FC; /* fond bleu*/
+    border: 1px solid #0065FC; /*bordure de la même couleur que le fond */
+    border-radius: 0px 15px 15px 0px; /*arrondi des bordures*/
+    color: #FFFFFF; /*couleur du texte en blanc */
+    font-size: 18px; /* agrandie la taille du texte à 18 */
+}
+
 /*Filtres*/
 
-    .recherche__filtres {
-        display: flex; /* elements flex et placés en ligne */
-        justify-content: space-between; /*centre les filtres sur la largeur donnée */
-        width: 65%; /*limite l'étalement sur la page */
-        padding-top: 2px;
-        margin-top: 1em;
-        align-items: center; /*centre verticalement */
-    }
+.recherche__filtres {
+    display: flex; /* elements flex et placés en ligne */
+    justify-content: space-between; /*centre les filtres sur la largeur donnée */
+    width: 70%; /*limite l'étalement sur la page */
+    padding-top: 2px;
+    margin-top: 1em;
+    align-items: center; /*centre verticalement */
+}
 
-    .critere {
-        font-size: 17px; /*taille demandée */
-        display: flex; /*passe chaque element en flex */
-        flex-direction: row; /* position horizontale */
-        border: 2px solid #D9D9D9; /*ajoute la bordure à tous*/
-        border-radius: 25px; /* arrondi les bordures */
-        white-space: nowrap; /* annule le retour à la ligne du texte qui reste en une seule ligne */
-        height: 35px; /*bloque la hauteur */
-        align-items: center; /*centre les filtres*/
-        padding-left:10px;
-        padding-right: 10px;
-    }
+.recherche__filtres p{
+    font-weight: 700;
+    font-size: 18px;
+}
 
-    .recherche__filtres i {
-        display: flex; /*flex le picto en boite */
-        align-items: center; /*centre verticalement */
-        justify-content: center; /*centre horizontalement */
-        font-size: 100%; /*redimensionne le picto */
-        color: #0065FC;
-    }
+.recherche__filtres--critere {
+    border: 2px solid #D9D9D9; /*ajoute la bordure à tous*/
+    border-radius: 25px; /* arrondi les bordures */
+    white-space: nowrap; /* annule le retour à la ligne du texte qui reste en une seule ligne */
+    height: auto;
+    padding: 1%;
+}
 
-    .critere p {
-        font-weight: 700; /*ercit en gras*/
-        margin: 0px;
-        padding: 2px;
-        margin-left: 5%;
-    }
+.recherche__filtres--critere i {
+    font-size: 22px;
+    color: #0065FC;
+    padding-right: 10px;
+}
 
-    .recherche__filtres :hover {
-        background: #DEEBFF;
-    }
+.recherche__filtres--critere p {
+    margin: 0px;
+}
 
-    /*infos nbre logements */
+.recherche__filtres--critere :hover {
+    background: #DEEBFF;
+}
 
-    .nombreDeLogements {
-        display: flex;
-        align-items: center;
-    }
+/*infos nbre logements */
 
-    #picto_i { /*boite du picto i pour faire le rond*/
-        margin: 10px;
-        width: 24px; /*faire un carré*/
-        height: 24px;
-        border: 1px solid #D9D9D9; /*mettre la bordure*/
-        border-radius: 100%;  /*l'arrondir */
-    }
+.nombreDeLogements {
+    display: flex;
+    align-items: center;
+}
 
-    .fa-solid.fa-info {
-        color: #0065FC; /*passe en bleu*/
-        padding-left: 10px; /*ajoute les marges intérieures pour le rond*/
-        padding-top: 3px;
-    }
+#picto_i { /*boite du picto i pour faire le rond*/
+    margin: 10px;
+    width: 24px; /*faire un carré*/
+    height: 24px;
+    border: 1px solid #D9D9D9; /*mettre la bordure*/
+    border-radius: 100%;  /*l'arrondir */
+}
+
+.fa-solid.fa-info {
+    color: #0065FC; /*passe en bleu*/
+    padding-left: 10px; /*ajoute les marges intérieures pour le rond*/
+    padding-top: 3px;
+}
 
 /*bloc principal*/
-    #contenuPrincipal{
-        display: flex;
-        flex-direction: row; /*aligne les 2 blocs hebergement et populaire */
-        width: 96%; /*100-les 2% de marge de chaque côté*/
-        margin-top: 2%;
-    }
-    .euro{
-        font-weight: 600;
-    }
+#contenuPrincipal{
+    display: flex;
+    flex-direction: row; /*aligne les 2 blocs hebergement et populaire */
+    width: 96%; /*100-les 2% de marge de chaque côté*/
+    margin-top: 2%;
+}
+.euro{
+    font-weight: 600;
+}
 
 /*hebergements*/
 
-    .hebergements {
-        display: grid; /*flex le bloc */
-        grid-template-rows: 1fr 4fr 2fr; /*place en colonne */
-        background-color: #F2F2F2; /*ajoute le fond sur le bloc */
-        border-radius: 20px; /*arrondi les bords du bloc*/
-        height: 625px; /*bloque la hauteur du bloc */
-        width: 70%;
-        max-width: 880px;
-        padding-left: 2%;
-        padding-right: 2%;
-        margin-right: 3%;
-        padding-top: 1em; /*aligne la hauteur avec le bloc de droite*/
-    }
+.hebergements {
+    display: grid; /*flex le bloc */
+    grid-template-rows: 1fr 4fr 2fr; /*place en colonne */
+    background-color: #F2F2F2; /*ajoute le fond sur le bloc */
+    border-radius: 20px; /*arrondi les bords du bloc*/
+    height: 625px; /*bloque la hauteur du bloc */
+    width: 70%;
+    max-width: 880px;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-right: 3%;
+    padding-top: 1em; /*aligne la hauteur avec le bloc de droite*/
+}
 
-    .hebergements h2 {
-        font-size: 22px;
-        font-weight: 700;
-        margin-top: auto;
-        margin-bottom: auto;
-    }
+.hebergements h2 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: auto;
+    margin-bottom: auto;
+}
 
-    .hebergements__card {
-        display: grid; /*positionne en grille*/
-        grid-template-columns:1fr 1fr 1fr; /*défini le nombre de colonnes*/
-        grid-template-rows: 1fr 1fr; /*défini le nombre de lignes*/
-        gap: 2%; /*défini l'espace entre les cards*/
-    }
+.hebergements__card {
+    display: grid; /*positionne en grille*/
+    grid-template-columns:1fr 1fr 1fr; /*défini le nombre de colonnes*/
+    grid-template-rows: 1fr 1fr; /*défini le nombre de lignes*/
+    gap: 2%; /*défini l'espace entre les cards*/
+}
 
-    .cardH {
-        display: flex; /*potiionne les cards en flex*/
-        flex-direction: column;
-        background: #FFFFFF; /*insère le fond blanc*/
-        border-radius: 20px; /*arrondi la card */
-        box-sizing: border-box; /*défini la taille*/
-        width: 100%;
-        height: 100%;
-        max-width: 246px;
-        max-height: 199px;
-        margin-bottom: 5%;
-        box-shadow: 1px 1px 9.6px rgba(0, 0, 0, 0.1);
-    }
+.cardH {
+    display: flex; /*potiionne les cards en flex*/
+    flex-direction: column;
+    background: #FFFFFF; /*insère le fond blanc*/
+    border-radius: 20px; /*arrondi la card */
+    box-sizing: border-box; /*défini la taille*/
+    width: 100%;
+    height: 100%;
+    max-width: 246px;
+    max-height: 199px;
+    margin-bottom: 5%;
+    box-shadow: 1px 1px 9.6px rgba(0, 0, 0, 0.1);
+}
 
-    .cardH a {
-        text-decoration: none; /*annule le soulignement des balises enfants créé par le lien*/
-        color: #000000; /*en noir pas en couleur liens*/
-        
-    }
-
-    .cardH img {
-        box-sizing: content-box; /*défini la taille de la boite image*/
-        width: 100%;
-        max-width: 236px; /*compte la card - les bords*/
-        height: 50%;
-        max-height: 114px; /*défini une hauteur max pour pas que l'image ne sorte */
-        border: 5px solid #FFFFFF; /*ajoute le tour blanc */
-        border-radius: 20px 20px 0px 0px; /*arrondi les bords du haut de l'image pour coller aux bords de la card*/
-        object-fit: cover; /*redimensionne et positionne l'image*/
-    }
-
-    .cardH__texte{
-        box-sizing: border-box; /*défini la taille des boites */
-        height: 75px;
-        display: flex; /*place le texte flex*/
-        flex-direction: column; /*passe en affichage colonnes*/
-        margin-left: 15px;
-    }
-
-    .cardH h4 {
-        font-weight: 700; /*en gras*/
-        margin-top: 0px;
-        margin-bottom: 2%; 
-    }
-    .cardH__texte p {
-        font-size: 14px;
-        margin-top: 0px;
-        margin-bottom: 3%; 
-    }
-
-    .cardH__etoiles {
-        color: #0065FC;
-        font-size: 12px;
-    }
-
-    .cardH__etoiles .card__etoiles--gris {
-        color: #F2F2F2;
-    }
-
-    /*le petit texte du bas*/
-    .hebergements > p { /*selectionne l'enfant p direct uniquement*/
-        font-size:  18px;
-        font-weight: 700;
-        margin-top: 5%;
-    }
-
-    /*populaires*/
-
-    .populaires {
-        display: grid; /*flex le bloc */
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 6fr; /*une ligne entête, une pour l'espace des cards */
-        background: #F2F2F2; /*ajoute le fond sur le bloc */
-        border-radius: 20px; /*arrondi les bords du bloc*/
-        width: 30%;
-        max-width: 420px;
-        padding-left: 2%;
-        padding-right: 2%;
-    }
-
-    .populaires__entete {
-        display: grid;
-        grid-template-columns: 80% 20%;
-        grid-template-rows: 1fr;
-        padding-top: 1em; /*aligne avec le bloc de gauche*/
-        }
-
-    .populaires h2 {
-        font-size: 22px;
-        font-weight: 700;
-        margin-top: auto;
-        margin-bottom: auto;
-
-    }
-    .fa-solid.fa-chart-line {
-        color: #0065FC;
-        font-size: 18px;
-        margin-top: 2em;
-        margin-top: auto;
-        margin-bottom: auto;
-    }
-
-    .populaires__card {
-        display: grid; /*positionne en grille*/
-        grid-template-columns:1fr; /*défini le nombre de colonnes*/
-        gap: 1%; /*défini l'espace entre les cards*/
+.cardH a {
+    text-decoration: none; /*annule le soulignement des balises enfants créé par le lien*/
+    color: #000000; /*en noir pas en couleur liens*/
     
+}
+
+.cardH img {
+    box-sizing: content-box; /*défini la taille de la boite image*/
+    width: 100%;
+    max-width: 236px; /*compte la card - les bords*/
+    height: 50%;
+    max-height: 114px; /*défini une hauteur max pour pas que l'image ne sorte */
+    border: 5px solid #FFFFFF; /*ajoute le tour blanc */
+    border-radius: 20px 20px 0px 0px; /*arrondi les bords du haut de l'image pour coller aux bords de la card*/
+    object-fit: cover; /*redimensionne et positionne l'image*/
+}
+
+.cardH__texte{
+    box-sizing: border-box; /*défini la taille des boites */
+    height: 75px;
+    display: flex; /*place le texte flex*/
+    flex-direction: column; /*passe en affichage colonnes*/
+    margin-left: 15px;
+}
+
+.cardH h4 {
+    font-weight: 700; /*en gras*/
+    margin-top: 0px;
+    margin-bottom: 2%; 
+}
+.cardH__texte p {
+    font-size: 14px;
+    margin-top: 0px;
+    margin-bottom: 3%; 
+}
+
+.cardH__etoiles {
+    color: #0065FC;
+    font-size: 12px;
+}
+
+.cardH__etoiles .card__etoiles--gris {
+    color: #F2F2F2;
+}
+
+/*le petit texte du bas*/
+.hebergements > p { /*selectionne l'enfant p direct uniquement*/
+    font-size:  18px;
+    font-weight: 700;
+    margin-top: 5%;
+}
+
+/*populaires*/
+
+.populaires {
+    display: grid; /*flex le bloc */
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 6fr; /*une ligne entête, une pour l'espace des cards */
+    background: #F2F2F2; /*ajoute le fond sur le bloc */
+    border-radius: 20px; /*arrondi les bords du bloc*/
+    width: 30%;
+    max-width: 420px;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.populaires__entete {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: 1fr;
+    padding-top: 1em; /*aligne avec le bloc de gauche*/
     }
 
-    .cardP a { /* le grid ne s'applique qu'aux enfants directs */
-        display: grid;
-        grid-template-columns: 40% 60%;
-        background: #FFFFFF; /*insère le fond blanc*/
-        border-radius: 20px; /*arrondi la card */
-        box-sizing: border-box; /*défini la taille*/
-        width: 100%;
-        max-width: 343px;
-        height: 144px;
-        text-decoration: none; /*annule le soulignement des balises enfants créé par le lien*/
-        color: #000000; /*en noir pas en couleur liens*/
-        box-shadow: 1px 1px 9.6px rgba(0, 0, 0, 0.1);
-    }
+.populaires h2 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: auto;
+    margin-bottom: auto;
 
-    .cardP img {                                                                                                                                                                                                  
-        box-sizing: content-box; /*défini la taille de la boite image*/
-        width: 100%;
-        max-width: 137px;
-        height: 100%;
-        max-height: 134px;
-        border: 5px solid #FFFFFF; /*ajoute le tour blanc */
-        border-radius: 20px 0px 0px 20px; /*arrondi les bords du haut de l'image pour coller aux bords de la card*/
-        object-fit: cover; /*redimensionne et positionne l'image*/
-    }
+}
+.fa-solid.fa-chart-line {
+    color: #0065FC;
+    font-size: 18px;
+    margin-top: 2em;
+    margin-top: auto;
+    margin-bottom: auto;
+}
 
-    .cardP__texte {
-        box-sizing: border-box; /*défini la taille des boites */
-        height: 144px;
-        display: grid; /*place le texte flex*/
-        grid-template-columns: 1fr; /*passe en affichage colonnes*/
-        grid-template-rows: 1fr 1fr 3fr;
-        margin-left: 10%;
-        padding-right: 7%; /*pour pas que le texte n'aille trop à droite et reste lisible au centre de la card*/
-        margin-top: 5%;
-    }
-    .cardP__texte h4{
-        font-weight: 700;
-        margin-top: auto;
-        margin-bottom: 5%;
-    }
-    .cardP__texte p {
-        font-size: 14px;
-        margin-top: 0px;
-    }
+.populaires__card {
+    display: grid; /*positionne en grille*/
+    grid-template-columns:1fr; /*défini le nombre de colonnes*/
+    gap: 1%; /*défini l'espace entre les cards*/
 
-    /*positionne et colore les etoiles*/
-    .cardP__etoiles {
-        color: #0065FC;
-        font-size: 12px;
-        margin-top: auto;
-        margin-bottom: auto;
-    }
+}
 
-    .cardP__etoiles .card__etoiles--gris {
-        color: #F2F2F2;
-    }
+.cardP a { /* le grid ne s'applique qu'aux enfants directs */
+    display: grid;
+    grid-template-columns: 40% 60%;
+    background: #FFFFFF; /*insère le fond blanc*/
+    border-radius: 20px; /*arrondi la card */
+    box-sizing: border-box; /*défini la taille*/
+    width: 100%;
+    max-width: 343px;
+    height: 144px;
+    text-decoration: none; /*annule le soulignement des balises enfants créé par le lien*/
+    color: #000000; /*en noir pas en couleur liens*/
+    box-shadow: 1px 1px 9.6px rgba(0, 0, 0, 0.1);
+}
+
+.cardP img {                                                                                                                                                                                                  
+    box-sizing: content-box; /*défini la taille de la boite image*/
+    width: 100%;
+    max-width: 137px;
+    height: 100%;
+    max-height: 134px;
+    border: 5px solid #FFFFFF; /*ajoute le tour blanc */
+    border-radius: 20px 0px 0px 20px; /*arrondi les bords du haut de l'image pour coller aux bords de la card*/
+    object-fit: cover; /*redimensionne et positionne l'image*/
+}
+
+.cardP__texte {
+    box-sizing: border-box; /*défini la taille des boites */
+    height: 144px;
+    display: grid; /*place le texte flex*/
+    grid-template-columns: 1fr; /*passe en affichage colonnes*/
+    grid-template-rows: 1fr 1fr 3fr;
+    margin-left: 10%;
+    padding-right: 7%; /*pour pas que le texte n'aille trop à droite et reste lisible au centre de la card*/
+    margin-top: 5%;
+}
+.cardP__texte h4{
+    font-weight: 700;
+    margin-top: auto;
+    margin-bottom: 5%;
+}
+.cardP__texte p {
+    font-size: 14px;
+    margin-top: 0px;
+}
+
+/*positionne et colore les etoiles*/
+.cardP__etoiles {
+    color: #0065FC;
+    font-size: 12px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.cardP__etoiles .card__etoiles--gris {
+    color: #F2F2F2;
+}
 
 /*activités*/
 
-    .activites{
-        display: flex;
-        flex-direction: column;
-        width: 96%;
-    }
-    .activites__cards {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        gap: 3%;
-        width: 100%;
-    }
+.activites{
+    display: flex;
+    flex-direction: column;
+    width: 96%;
+}
+.activites__cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 3%;
+    width: 100%;
+}
 
-    .cardA {
-        display: grid; /*potiionne les cards grid*/
-        grid-template-rows: 85% 15%; /*fait deux colonnes*/
-        background: #FFFFFF; /*insère le fond blanc pour la partie du texte*/
-        border-radius: 20px; /*arrondi toute la card */
-        box-sizing: border-box; /*défini la taille*/
-        max-width: 302px;
-        max-height: 445px;
-        box-shadow: 1px 1px 9.6px rgba(0, 0, 0, 0.1);
-    }
+.cardA {
+    display: grid; /*potiionne les cards grid*/
+    grid-template-rows: 85% 15%; /*fait deux colonnes*/
+    background: #FFFFFF; /*insère le fond blanc pour la partie du texte*/
+    border-radius: 20px; /*arrondi toute la card */
+    box-sizing: border-box; /*défini la taille*/
+    max-width: 302px;
+    max-height: 445px;
+    box-shadow: 1px 1px 9.6px rgba(0, 0, 0, 0.1);
+}
 
-    .cardA img {                                                                                                                                                                                                  
-        box-sizing: border-box; /*défini la taille de la boite image incluant les bordures*/
-        width: 100%;
-        max-width: 302px;
-        height: 100%;
-        max-height: 389px;
-        border-radius: 20px 20px 0px 0px; /*arrondi les bords du haut de l'image pour coller aux bords de la card*/
-        object-fit: cover; /*redimensionne et positionne l'image*/
-    }
+.cardA img {                                                                                                                                                                                                  
+    box-sizing: border-box; /*défini la taille de la boite image incluant les bordures*/
+    width: 100%;
+    max-width: 302px;
+    height: 100%;
+    max-height: 389px;
+    border-radius: 20px 20px 0px 0px; /*arrondi les bords du haut de l'image pour coller aux bords de la card*/
+    object-fit: cover; /*redimensionne et positionne l'image*/
+}
 
-    .cardA h4{
-        font-weight: 700;
-        margin-top: auto;
-        margin-bottom: auto;
-        padding-left: 5%;
-    }
+.cardA h4{
+    font-weight: 700;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-left: 5%;
+}
 
 /*footer*/
-    .piedDePage {
-        display: flex;
-        justify-content: space-around;
-        background-color: #F2F2F2;
-        width: 90%;
-        height: 30%;
-        max-height: 225px;
-        margin-top: 5%;
-        padding: 3%;
-    }
+.piedDePage {
+    display: flex;
+    justify-content: space-around;
+    background-color: #F2F2F2;
+    width: 90%;
+    height: 30%;
+    max-height: 225px;
+    margin-top: 5%;
+    padding: 3%;
+}
 
-    h3 {
-        font-size: 18px;
-        font-weight: 700;
-    }
+h3 {
+    font-size: 18px;
+    font-weight: 700;
+}
 
 }
 
@@ -435,51 +429,51 @@
 @media screen and (max-width : 992px) {
 
 /*modifs de taille générales*/
-    body{
-        margin-left: 5%; /*augmentation des marges latérales*/
-        margin-right: 5%;
-    }
- /*modifs nav*/
-    .nav__link a:hover {
-        color: #000000; /*reste noir*/
-        border-top: none; /*pas de bordure en haut*/
-    }
+body{
+    margin-left: 5%; /*augmentation des marges latérales*/
+    margin-right: 5%;
+}
+/*modifs nav*/
+.nav__link a:hover {
+    color: #000000; /*reste noir*/
+    border-top: none; /*pas de bordure en haut*/
+}
 
 /*modifs filtres*/
- .recherche__filtres {
-        width: 90%; /*ajuste la largeur des filtres*/
-    }
- /*contenu principal*/
-    #contenuPrincipal{
-        flex-direction: column; /*passe en colonne*/
-    }
+.recherche__filtres {
+    width: 90%; /*ajuste la largeur des filtres*/
+}
+/*contenu principal*/
+#contenuPrincipal{
+    flex-direction: column; /*passe en colonne*/
+}
 
 /*hebergement*/
-    .hebergements{
-        width : 100%;
-        margin-bottom: 5%;
-        grid-template-rows: 1fr 4fr 1fr ;
-    }
+.hebergements{
+    width : 100%;
+    margin-bottom: 5%;
+    grid-template-rows: 1fr 4fr 1fr ;
+}
 
 /*populaires*/
-    .populaires{
-        width: 100%;
-        max-width: 883px;
-        grid-template-rows: 1fr 5fr; /*modifie les proportions */
-        padding-top: 2%;
-    }
+.populaires{
+    width: 100%;
+    max-width: 883px;
+    grid-template-rows: 1fr 5fr; /*modifie les proportions */
+    padding-top: 2%;
+}
 
-    .populaires__entete {
-        grid-template-columns: 95% 5%;
-    }
-    .populaires__card{
-        grid-template-columns: 1fr 1fr 1fr; /*passe en horizontal*/
-        margin: auto;
-        gap: 5%;
-    }
+.populaires__entete {
+    grid-template-columns: 95% 5%;
+}
+.populaires__card{
+    grid-template-columns: 1fr 1fr 1fr; /*passe en horizontal*/
+    margin: auto;
+    gap: 5%;
+}
 
 /*Activites*/
 
 .activites__cards {
-    gap:5%;
+gap:5%;
 }
