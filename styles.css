@@ -4,7 +4,8 @@ body {
     font-family: 'Raleway', Arial, serif, sans-serif;
     font-size: 16px; /* taille de police de base pour tout le document*/
     margin :auto;
-    width: 1400px; /*ajuste la taille du body à la taille de la fenetre*/
+    max-width: 1400px; /*ajuste la taille du body à la taille de la fenetre*/
+    width: 96%;
 }
 
 /*header*/
@@ -160,41 +161,44 @@ i.fa-solid.fa-location-dot { /*selectionne avec .pour identifier les 2 classes d
 #contenuPrincipal{
     display: flex;
     flex-direction: row; /*aligne les 2 blocs hebergement et populaire */
-    width: 96%; /*100-les 2% de marge de chaque côté*/
     margin-top: 2%;
+    justify-content: space-between;
+    height: 625px;
 }
 .euro{
     font-weight: 600;
 }
 
-/*hebergements*/
-
-.hebergements {
-    display: grid; /*flex le bloc */
-    grid-template-rows: 1fr 4fr 2fr; /*place en colonne */
+.hebergements, .populaires {
+    display: flex;
+    flex-direction: column;
     background-color: #F2F2F2; /*ajoute le fond sur le bloc */
     border-radius: 20px; /*arrondi les bords du bloc*/
-    height: 625px; /*bloque la hauteur du bloc */
-    width: 70%;
-    max-width: 880px;
-    padding-left: 2%;
-    padding-right: 2%;
-    margin-right: 3%;
-    padding-top: 1em; /*aligne la hauteur avec le bloc de droite*/
+    width: 65%;
+    padding: 2%;
 }
 
-.hebergements h2 {
+.hebergements{
+    width: 65%;
+}
+
+.populaires{
+    width: 25%;
+}
+.hebergements h2, .populaires h2 {
     font-size: 22px;
     font-weight: 700;
     margin-top: auto;
     margin-bottom: auto;
 }
+ /*hebergements*/
 
 .hebergements__card {
     display: grid; /*positionne en grille*/
     grid-template-columns:1fr 1fr 1fr; /*défini le nombre de colonnes*/
     grid-template-rows: 1fr 1fr; /*défini le nombre de lignes*/
     gap: 2%; /*défini l'espace entre les cards*/
+    width: 100%;
 }
 
 .cardH {
@@ -219,9 +223,10 @@ i.fa-solid.fa-location-dot { /*selectionne avec .pour identifier les 2 classes d
 
 .cardH img {
     box-sizing: content-box; /*défini la taille de la boite image*/
-    width: 100%;
+    width: 95%;
     max-width: 236px; /*compte la card - les bords*/
-    height: 50%;
+    align-content: center; /*pour que l'image soit centrée*/
+    height: 60%;
     max-height: 114px; /*défini une hauteur max pour pas que l'image ne sorte */
     border: 5px solid #FFFFFF; /*ajoute le tour blanc */
     border-radius: 20px 20px 0px 0px; /*arrondi les bords du haut de l'image pour coller aux bords de la card*/
@@ -265,45 +270,24 @@ i.fa-solid.fa-location-dot { /*selectionne avec .pour identifier les 2 classes d
 
 /*populaires*/
 
-.populaires {
-    display: grid; /*flex le bloc */
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 6fr; /*une ligne entête, une pour l'espace des cards */
-    background: #F2F2F2; /*ajoute le fond sur le bloc */
-    border-radius: 20px; /*arrondi les bords du bloc*/
-    width: 30%;
-    max-width: 420px;
-    padding-left: 2%;
-    padding-right: 2%;
-}
-
 .populaires__entete {
-    display: grid;
-    grid-template-columns: 80% 20%;
-    grid-template-rows: 1fr;
-    padding-top: 1em; /*aligne avec le bloc de gauche*/
+    display: flex;
+    justify-content: space-between;
+    height: 10%;
     }
 
-.populaires h2 {
-    font-size: 22px;
-    font-weight: 700;
-    margin-top: auto;
-    margin-bottom: auto;
-
-}
 .fa-solid.fa-chart-line {
     color: #0065FC;
     font-size: 18px;
-    margin-top: 2em;
     margin-top: auto;
     margin-bottom: auto;
 }
 
 .populaires__card {
-    display: grid; /*positionne en grille*/
-    grid-template-columns:1fr; /*défini le nombre de colonnes*/
-    gap: 1%; /*défini l'espace entre les cards*/
-
+    display: flex; /*positionne en grille*/
+    flex-direction: column;
+    height: 90%;
+    justify-content: space-between;
 }
 
 .cardP a { /* le grid ne s'applique qu'aux enfants directs */
@@ -368,12 +352,12 @@ i.fa-solid.fa-location-dot { /*selectionne avec .pour identifier les 2 classes d
 .activites{
     display: flex;
     flex-direction: column;
-    width: 96%;
+    margin-top: 2%;
 }
 .activites__cards {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 3%;
+    gap: 5%;
     width: 100%;
 }
 
@@ -383,7 +367,7 @@ i.fa-solid.fa-location-dot { /*selectionne avec .pour identifier les 2 classes d
     background: #FFFFFF; /*insère le fond blanc pour la partie du texte*/
     border-radius: 20px; /*arrondi toute la card */
     box-sizing: border-box; /*défini la taille*/
-    max-width: 302px;
+    width: 100%;
     max-height: 445px;
     box-shadow: 1px 1px 9.6px rgba(0, 0, 0, 0.1);
 }
@@ -391,7 +375,6 @@ i.fa-solid.fa-location-dot { /*selectionne avec .pour identifier les 2 classes d
 .cardA img {                                                                                                                                                                                                  
     box-sizing: border-box; /*défini la taille de la boite image incluant les bordures*/
     width: 100%;
-    max-width: 302px;
     height: 100%;
     max-height: 389px;
     border-radius: 20px 20px 0px 0px; /*arrondi les bords du haut de l'image pour coller aux bords de la card*/
@@ -400,6 +383,7 @@ i.fa-solid.fa-location-dot { /*selectionne avec .pour identifier les 2 classes d
 
 .cardA h4{
     font-weight: 700;
+    font-size: 15px;
     margin-top: auto;
     margin-bottom: auto;
     padding-left: 5%;
@@ -408,13 +392,19 @@ i.fa-solid.fa-location-dot { /*selectionne avec .pour identifier les 2 classes d
 /*footer*/
 .piedDePage {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     background-color: #F2F2F2;
-    width: 90%;
+    padding-left: 5%; 
+    padding-top: 2%;
+    padding-bottom: 2%;
     height: 30%;
     max-height: 225px;
     margin-top: 5%;
-    padding: 3%;
+ 
+}
+
+.piedDePage div{
+    margin-right: 20%;
 }
 
 h3 {
@@ -422,17 +412,10 @@ h3 {
     font-weight: 700;
 }
 
-}
-
 
 /*forme  tablette*/
 @media screen and (max-width : 992px) {
 
-/*modifs de taille générales*/
-body{
-    margin-left: 5%; /*augmentation des marges latérales*/
-    margin-right: 5%;
-}
 /*modifs nav*/
 .nav__link a:hover {
     color: #000000; /*reste noir*/
@@ -445,35 +428,15 @@ body{
 }
 /*contenu principal*/
 #contenuPrincipal{
-    flex-direction: column; /*passe en colonne*/
+    flex-direction: column;
+    height:957px;
 }
 
-/*hebergement*/
-.hebergements{
-    width : 100%;
-    margin-bottom: 5%;
-    grid-template-rows: 1fr 4fr 1fr ;
+/*hebergements*/
+.hebergements, .populaires {
+    width: 96%;
 }
 
-/*populaires*/
-.populaires{
-    width: 100%;
-    max-width: 883px;
-    grid-template-rows: 1fr 5fr; /*modifie les proportions */
-    padding-top: 2%;
-}
-
-.populaires__entete {
-    grid-template-columns: 95% 5%;
-}
-.populaires__card{
-    grid-template-columns: 1fr 1fr 1fr; /*passe en horizontal*/
-    margin: auto;
-    gap: 5%;
-}
-
-/*Activites*/
-
-.activites__cards {
-gap:5%;
+.populaires__card {
+    flex-direction: row;
 }
