@@ -239,10 +239,12 @@ i.fa-solid.fa-location-dot { /*selectionne avec . pour identifier les 2 classes 
 }
 
 /*le Afficher plus du bas*/
-.hebergements > p { /*selectionne l'enfant p direct uniquement*/
+.hebergements > a { /*selectionne l'enfant p direct uniquement*/
     font-size:  18px;
     font-weight: 700;
     margin-top: 8%;
+    text-decoration: none;
+    color: #000000 ;
 }
 
 /*populaires*/
@@ -468,7 +470,6 @@ version mobile
     .nav__link a {
         font-weight: 500;
         padding: 10px;
-        padding-left: ;
     }
     .nav__link:hover {
         border-bottom: 3px solid #0065FC;
