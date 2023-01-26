@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Booki</title>
-        <!-- Relier le CSS -->
+        <!-- Relier le fichier CSS depuis le dossier-->
         <link href="CSS/style.css" rel="stylesheet">
         <!-- Relier la police Raleway en 400 et 700 avec Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,9 +34,9 @@
             <form class="recherche__barre" action="#" method="get"><!--Insert le formulaire-->        
                 <label for="lieu" class="recherche__barre--picto"><i class="fa-solid fa-location-dot"></i></label><!--défini la légende le picto de début pour l'input à id "lieu"-->
                 <input type="search" name="lieu" id="lieu" class="recherche__barre--champs"><!--insert le champs de recherche ayant pour id "lieu"-->               
-                <div class="recherche__barre--bouton">
-                    <input type="button" id="bouton" value="Rechercher" class="recherche__barre--texte"><!--insert le bouton un recherche inactif-->
-                    <label for="bouton" class="recherche__barre--logo"><i class="fa-solid fa-magnifying-glass"></i></label>
+                <div class="recherche__barre--bouton"><!--insert le bouton recherche inactif-->
+                    <input type="button" id="bouton" value="Rechercher" class="recherche__barre--texte">
+                    <label for="bouton" class="recherche__barre--logo"><i class="fa-solid fa-magnifying-glass"></i></label> <!--Rattache le logo à l'input dessus-->
                 </div>
             </form>
 
@@ -54,9 +54,7 @@
             </div>
         </div>
 
-
         <main> 
-
             <div id="contenuPrincipal">
                 <section class="hebergements">
                     <h2 id="lienHebergements">Hébergements à Marseille</h2>
@@ -227,8 +225,6 @@
                                 </div>
                             </a>
                         </div>
-                    
-
                     </div>
                 </section>
             </div>
@@ -238,28 +234,35 @@
                 <div class="activites__cards">
                 <!--Les cards activités ici-->
                     <div class="cardA">
-                        <img src="images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Photo du Vieux Port de Marseille">
-                        <h4>Vieux-Port</h4>
+                        <a href="#">
+                            <img src="images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Photo du Vieux Port de Marseille">
+                            <h4>Vieux-Port</h4>
+                        </a>
                     </div>
 
                     <div class="cardA">
-                        <img src="images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="Photo du fort de Pomègues">
-                        <h4>Fort de Pomègues</h4>
+                        <a href="#">
+                            <img src="images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="Photo du fort de Pomègues">
+                            <h4>Fort de Pomègues</h4>
+                        </a>
                     </div>
 
                     <div class="cardA">
-                        <img src="images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="Photo du Parc National des Calanques">
-                        <h4>Parc national des Calanques</h4>
+                        <a href="#">
+                            <img src="images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="Photo du Parc National des Calanques">
+                            <h4>Parc national des Calanques</h4>
+                        </a>
                     </div>
 
                     <div class="cardA">
-                        <img src="images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="Phot de Notre-Dame-de-la-Garde">
-                        <h4>Notre-Dame-de-la-Garde</h4>
+                        <a href="#">
+                            <img src="images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="Phot de Notre-Dame-de-la-Garde">
+                            <h4>Notre-Dame-de-la-Garde</h4>
+                        </a>
                     </div>
-
                 </div>
             </aside>
-        
+        </main>    
         <footer class="piedDePage">
             <div class="aPropos">
                 <h3>À propos</h3>
@@ -280,6 +283,5 @@
                 <a href="#">Nous contacter</a>
             </div>
         </footer>
-    </main>
     </body>
 </html>
