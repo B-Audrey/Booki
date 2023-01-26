@@ -120,6 +120,7 @@ i.fa-solid.fa-location-dot { /*selectionne avec . pour identifier les 2 classes 
 /****************Filtres*****************/
 .recherche__filtres {
     justify-content: space-between;
+    column-gap: 1%;
     width: 70%; /*limite l'étalement sur la page */
     padding-top: 2px;
     align-items: center; /*centre verticalement */
@@ -319,7 +320,7 @@ format  tablette
 @media screen and (max-width : 992px) {
 
     body {
-        width: 95%;
+        width: 90%;
     }
     /**********nav*********/
     .nav__link a:hover {
@@ -344,6 +345,8 @@ format  tablette
     }
     .populaires__card {
         flex-direction: row;
+        column-gap: 1%;
+
     }
     .cardP a{
         max-width: 252px;
@@ -467,9 +470,9 @@ version mobile
     .recherche__filtres--texte {
         grid-column: 1/3;
     }
-    .recherche__filtres--critere {
+    .recherche__filtres--critere{
         align-items: center;
-        font-size: 11px;
+        font-size : 11px !important; /*pour surpasser la règle des 18 pixels et forcer la diminution de police*/
         white-space: pre-wrap;
     }
     .nombreDeLogements{
@@ -494,7 +497,6 @@ version mobile
         margin-top: 28px;
         margin-bottom: 26px;
     }
-    
     .populaires {
         border-radius: 0px;
         padding-bottom: 47px;
@@ -523,23 +525,17 @@ version mobile
     .hebergements__card {
         display: flex ; /*passe en flex pour la disposition verticale*/
         flex-direction: column;
+        gap: 12px;
     }
     .cardH, .cardH a{
         height: 199px;
-        margin-bottom: 12px;
     }
-    .cardH img{
-        height: 124px;
-    }
-    .cardH__texte h4{
-        margin-bottom: 2px;
-    }
-    .cardH__texte p{
-        margin-bottom: 5px;
+    .cardH__texte h4, .cardH__texte p{
+        margin-bottom: 0px;
     }
 
 /*texte dessous*/
-    .hebergements > p{ /*efface le "afficher plus*/
+    .hebergements > a{ /*efface le "afficher plus*/
         display: none;
     }
 
@@ -572,5 +568,8 @@ version mobile
         margin-top: 80px;
         height: max-content;
         max-height: max-content;
+    }
+    .piedDePage div{
+        width: 100%;
     }
 }
