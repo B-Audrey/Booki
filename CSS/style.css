@@ -24,7 +24,7 @@ h1, .recherche__filtres p, h2, h3, h4, .hebergements > a, .recherche__barre--cha
 .hebergements, .populaires, .cardH a, .cardP a, .cardA a{
     border-radius: 20px;
 }
-.nav__link a, .piedDePage a, .hebergements > a, .cardA a{
+.nav__lien a, .piedDePage a, .hebergements > a, .cardA a, .cardH a, .cardP a, .cardA a{
     color: #000000; /*texte en noir*/
     text-decoration: none; /*annule le soulignement du lien*/
 }
@@ -39,8 +39,6 @@ h3, i.fa-solid.fa-location-dot, .recherche__barre--champs,.recherche__barre--tex
     width: 100%;
     height: 100%;
     box-shadow: 1px 1px 9.6px rgba(0, 0, 0, 0.1);
-    text-decoration: none; /*annule le soulignement des balises enfants créé par le lien*/
-    color: #000000; /*en noir pas en couleur liens*/
 }
 /****************header*****************/
 header {
@@ -60,15 +58,15 @@ nav{
     margin-top: 0px; /* fixe la marge top à 0 pour le survol tout en haut de la page*/
     margin-bottom: 0px;
 }
-.nav__link {
+.nav__lien {
     list-style-type: none; /*enlèce les puces de la liste*/
     margin-right: 2%; /*fixe la marge par la droite entre les deux liens et le bord droit*/
     padding: 48px; /*bloque la hauteur du padding pour la barre au survol*/
 }
-.nav__link a {
+.nav__lien a {
     padding-top: 46px; /*la hauteur du padding - les 2px de bordure apparentes*/ 
 }
-.nav__link a:hover {
+.nav__lien a:hover {
     border-top: 3px #0065FC solid; /*fait apparaitre une bordure en haut au survol du lien*/
     color:#0065FC;
 }
@@ -318,7 +316,7 @@ format  tablette
         width: 90%;
     }
 /**********nav*********/
-    .nav__link a:hover {
+    .nav__lien a:hover {
         color: #000000; /*reste noir au clic*/
         border-top: none; /*annule aussi la bordure*/
     }
@@ -394,22 +392,22 @@ version mobile
         padding-left: 0px;
         margin-top: 49px;
     }
-    .nav__link {
+    .nav__lien {
         width: 50%; /*chaque lien prends 50% de la page*/
         text-align: center;
         margin: 1px;
         padding: 10px;
         border-bottom: 3px solid #F2F2F2;
     }
-    .nav__link a {
+    .nav__lien a {
         font-weight: 500;
         padding: 10px;
     }
-    .nav__link:hover {
-        border-bottom: 3px solid #0065FC;
+    .nav__lien:hover {
+        border-bottom: 3px solid #0065FC; /*survol du bloc*/
     }
-    .nav__link a:hover {
-        color : #0065FC; 
+    .nav__lien a:hover {
+        color : #0065FC;  /*survol du texte*/
     }
 /************barre de recherche**************/
      .recherche{
